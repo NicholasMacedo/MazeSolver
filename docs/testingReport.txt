@@ -1,0 +1,45 @@
+****************************************************
+Nicholas Macedo - Van Horne    0889469
+CIS*2520 (DE)  		       Assignment 1/A1
+Friday June 5th 2015
+****************************************************
+
+
+****************
+Testing Document
+****************
+
+	This document describes all the tests used thorough the assignment and why they are useful. Each program's testing documentation
+	can be found under the appropriate subheading.  
+
+********************
+Stack & List ADTs
+********************
+
+	The tests on the stack ADT and linkedList ADT functions in testing.c are thorough because it checks each function for four cases. 
+	These cases consist of: small numbers, big numbers, negative numbers and a NULL value. Each function in the ADT is put through the test with
+	the outcome of the test printed to the screen in an organized and easy to follow manor. The initial values of the stacks 
+	are printed before the testing begins to insure that the values of the stack, and list inside the stack, can be double checked by
+	human eye, and calculations, to further the correctness checking of the functions outcomes. In cases where the function requires an int,
+	instead of passing in NULL for testing it was passed in a zero. This is due to the compiler giving a warning about NULL being of type
+	void * and it was expecting an int. Thus, with the testing of all four situations the stack and list ADTs can be considered thoroughly
+	tested and ready for use. Through testing the four cases the functions are tested in all sorts of conditions that it should be ready to handle 
+	thus boosting the robustness of the stack and linkedList ADTs.
+
+********************
+Maze Solving Program
+********************
+
+	Through out the development of the program, multiple print statements were placed in loops, at the end of loops and in other
+	strategic locations within the code. Most of these print statements can still be found and are commented out amongst the many
+	lines of the maze main file and functions file. The use of print statements for testing is a very powerful technique. Print statements
+	can be used to notify the programmer of the values being passed around to and from functions, number of times a loop has run and the 
+	success or failure of implemented logic to the code. Aside from using print statements, another tool used for debugging was gdb. This 
+	program, when run, can notify the user what is going wrong with their problem when a segfault is occurring. Valgrind was also used to make
+	sure mallocs and frees are occurring where they need to. Although this program is a little confusing so outcome of tests are not 100% accurate,
+	the interpretation of it still helped in the checking if frees and mallocs were successful. To test to make sure the program was working correctly,
+	many different size mazes where run through the program to make sure that it responds correctly under these different maze sizes. The maze starting
+	and ending positions were also changed in the 12x12 maze file just to see how the maze would react. The program was also asked to run with a maze that
+	was not square (12x15) with changed starting and end posistions as well as funning a file that did not have a maze in it. As a result of the previous test,
+	the known limitation of the program only being able to run mazes was found. Through the use of print statements, gdb,valgrind and different maze sizes, the 
+	maze program is tested and works well when preforming its tasks within the known limitations.
